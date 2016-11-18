@@ -1,23 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/18 14:02:47 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/11/18 14:07:49 by kacoulib         ###   ########.fr       */
+/*   Created: 2016/11/16 16:00:37 by kacoulib          #+#    #+#             */
+/*   Updated: 2016/11/18 13:28:40 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlen(const char *str)
+int		ft_atoi(const char *str)
 {
-	size_t	i;
+	int i;
+	int j;
+	int k;
+	int l;
+	int r;
 
 	i = 0;
-	while (str[i])
+	while (ft_isdigit(str[i]))
 		i++;
-	return (i);
+	if (i == 0 || i == 1)
+		return ((i == 0) ? 0 : str[0] - 48);
+	j = 1;
+	k = 0;
+	l = 0;
+	r = 0;
+	while (i-- > 0)
+	{
+		j = 1;
+		k = 0;
+		while (k++ < i)
+			j *= 10;
+		r += j * (str[l] - 48);
+		l++;
+	}
+	return (r);
 }
