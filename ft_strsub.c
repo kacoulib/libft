@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/18 14:29:39 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/11/18 18:33:19 by kacoulib         ###   ########.fr       */
+/*   Created: 2016/11/23 16:52:02 by kacoulib          #+#    #+#             */
+/*   Updated: 2016/11/23 17:06:31 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		*ft_memcpy(void *s1, const void *s2, size_t n)
+char		*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
+	int		i;
+	char	*r;
 
 	i = 0;
-	while (i < n)
+	r = malloc(sizeof(char *) * (len + 1));
+	if (r == NULL)
+		return (r);
+	while (s[start] && len > 0)
 	{
-		((char *)s1)[i] = ((char *)s2)[i];
+		r[i] = s[start];
 		i++;
+		len--;
+		start++;
 	}
-	return (s1);
+	r[start] = '\0';
+	return (r);
 }

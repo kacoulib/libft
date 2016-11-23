@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/18 14:29:39 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/11/18 18:33:19 by kacoulib         ###   ########.fr       */
+/*   Created: 2016/11/23 14:50:08 by kacoulib          #+#    #+#             */
+/*   Updated: 2016/11/23 14:52:10 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		*ft_memcpy(void *s1, const void *s2, size_t n)
+void	ft_putstr_fd(char const *s, int fd)
 {
-	size_t	i;
+	int i;
 
 	i = 0;
-	while (i < n)
-	{
-		((char *)s1)[i] = ((char *)s2)[i];
-		i++;
-	}
-	return (s1);
+	while (s[i])
+		ft_putchar_fd(s[i++], fd);
 }

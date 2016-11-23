@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/18 14:29:39 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/11/18 18:33:19 by kacoulib         ###   ########.fr       */
+/*   Created: 2016/11/18 15:49:57 by kacoulib          #+#    #+#             */
+/*   Updated: 2016/11/18 15:52:42 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		*ft_memcpy(void *s1, const void *s2, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	int i;
 
-	i = 0;
-	while (i < n)
+	i = (ft_strlen(s) - 1);
+	while (s[i])
 	{
-		((char *)s1)[i] = ((char *)s2)[i];
-		i++;
+		if (s[i] == c)
+			return (&((char *)s)[i]);
+		i--;
 	}
-	return (s1);
+	return (NULL);
 }

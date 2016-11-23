@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/18 14:29:39 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/11/18 18:33:19 by kacoulib         ###   ########.fr       */
+/*   Created: 2016/11/23 16:33:03 by kacoulib          #+#    #+#             */
+/*   Updated: 2016/11/23 16:41:41 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		*ft_memcpy(void *s1, const void *s2, size_t n)
+char		*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
+	int		i;
+	int		j;
+	char	*r;
 
 	i = 0;
-	while (i < n)
+	r = malloc(sizeof(char *) * (ft_strlen(s1) + ft_strlen(s2)));
+	while (s1[i])
 	{
-		((char *)s1)[i] = ((char *)s2)[i];
+		r[i] = s1[i];
 		i++;
 	}
-	return (s1);
+	j = 0;
+	while (s2[j])
+	{
+		r[i] = s2[j];
+		i++;
+		j++;
+	}
+	r[i] = '\0';
+	return (r);
 }
