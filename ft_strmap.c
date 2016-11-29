@@ -6,7 +6,7 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/23 17:51:36 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/11/23 17:55:28 by kacoulib         ###   ########.fr       */
+/*   Updated: 2016/11/27 14:43:57 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ char		*ft_strmap(char const *s, char (*f)(char))
 	char	*r;
 
 	i = 0;
-	r = malloc(sizeof(char *) * ft_strlen(s));
+	r = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
+	if (!r)
+		return (NULL);
 	while (s[i])
 	{
 		r[i] = f(s[i]);

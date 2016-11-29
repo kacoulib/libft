@@ -6,7 +6,7 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/24 15:54:27 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/11/24 16:57:46 by kacoulib         ###   ########.fr       */
+/*   Updated: 2016/11/28 21:57:22 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char		*ft_itoa(int n)
 	j = len;
 	while (len /= 10)
 		i++;
-	r = (char *)malloc(sizeof(char) * i + 1);
+	r = (char *)malloc(sizeof(char)  * (i + 1));
 	if (r == NULL)
 		return (NULL);
 	r[i] = '\0';

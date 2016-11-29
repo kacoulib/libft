@@ -6,7 +6,7 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 13:51:17 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/11/18 15:13:20 by kacoulib         ###   ########.fr       */
+/*   Updated: 2016/11/27 13:37:42 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 	if (*s2 == '\0')
 		return ((char *)s1);
 	i = 0;
-	while (s1 && n)
+	while (*s1 && n)
 	{
 		if (*s1 == s2[i])
 			i++;

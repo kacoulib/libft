@@ -6,7 +6,7 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 18:50:11 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/11/18 13:48:20 by kacoulib         ###   ########.fr       */
+/*   Updated: 2016/11/28 16:34:46 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ char	*ft_strstr(const char *s1, const char *s2)
 {
 	int	i;
 
-	if (*s2 == '\0')
+	if (*s2 == '\0' || *s2 == '\0')
 		return ((char *)s1);
 	i = 0;
-	while (s1)
+	while (*s1)
 	{
 		if (*s1 == s2[i])
 			i++;

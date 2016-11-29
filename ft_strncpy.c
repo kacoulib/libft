@@ -6,7 +6,7 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 17:44:29 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/11/18 17:49:11 by kacoulib         ###   ########.fr       */
+/*   Updated: 2016/11/26 15:47:41 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,20 @@
 char		*ft_strncpy(char *s1, const char *s2, size_t len)
 {
 	size_t	i;
+	int		n;
 
 	i = 0;
-	while (s2[i] && i < len)
+	n = 0;
+	while (i < len)
 	{
-		s1[i] = s2[i];
+		if (s2[i] && !n)
+			s1[i] = s2[i];
+		else
+		{
+			s1[i] = '\0';
+			n = 1;
+		}
 		i++;
 	}
-	s1[i] = '\0';
 	return (s1);
 }

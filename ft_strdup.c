@@ -6,7 +6,7 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 14:09:55 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/11/18 14:53:27 by kacoulib         ###   ########.fr       */
+/*   Updated: 2016/11/28 19:03:36 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ char		*ft_strdup(const char *str)
 	char	*r;
 
 	i = ft_strlen(str);
-	r = (char *)malloc(i * sizeof(str));
+	r = (char *)malloc(sizeof(char) * (i + 1));
+	if (!r)
+		return (NULL);
 	r[i] = '\0';
 	while (i-- > 0)
 		r[i] = str[i];

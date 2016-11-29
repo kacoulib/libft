@@ -6,7 +6,7 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/23 16:52:02 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/11/23 17:06:31 by kacoulib         ###   ########.fr       */
+/*   Updated: 2016/11/27 14:50:37 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char		*ft_strsub(char const *s, unsigned int start, size_t len)
 	char	*r;
 
 	i = 0;
-	r = malloc(sizeof(char *) * (len + 1));
+	r = (char *)malloc(sizeof(char) * (len + 1));
 	if (r == NULL)
 		return (r);
 	while (s[start] && len > 0)
@@ -28,6 +28,6 @@ char		*ft_strsub(char const *s, unsigned int start, size_t len)
 		len--;
 		start++;
 	}
-	r[start] = '\0';
+	r[i] = '\0';
 	return (r);
 }

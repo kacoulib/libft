@@ -6,7 +6,7 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 16:33:59 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/11/18 17:30:30 by kacoulib         ###   ########.fr       */
+/*   Updated: 2016/11/27 13:31:36 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ size_t		ft_strlcat(char *s1, const char *s2, size_t size)
 	while (s1[i] && i < size)
 		i++;
 	j = i;
-	while (s2[i - j] && j < size - 1)
+	while (s2[i - j] && i < size - 1)
 	{
 		s1[i] = s2[i - j];
-		j++;
+		i++;
 	}
 	if (j < size)
 		s1[i] = '\0';

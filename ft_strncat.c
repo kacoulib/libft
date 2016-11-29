@@ -6,7 +6,7 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 16:25:04 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/11/18 16:32:00 by kacoulib         ###   ########.fr       */
+/*   Updated: 2016/11/28 19:32:50 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,11 @@ char		*ft_strncat(char *s1, const char *s2, size_t n)
 
 	i = (ft_strlen(s1));
 	j = 0;
-	while (s2[j] && i < n)
+	while (s2[j] && n > 0)
 	{
 		s1[i + j] = s2[j];
 		j++;
+		n--;
 	}
 	s1[i + j] = '\0';
 	return (s1);

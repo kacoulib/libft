@@ -6,7 +6,7 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/23 18:43:14 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/11/24 11:33:13 by kacoulib         ###   ########.fr       */
+/*   Updated: 2016/11/27 14:35:46 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char		*ft_strnew(size_t size)
 {
 	char	*r;
 
-	r = malloc(size);
+	r = (char *)malloc(size + 1);
 	if (r == NULL)
 		return (NULL);
 	while (size > 0)

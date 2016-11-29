@@ -6,37 +6,29 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 16:00:37 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/11/18 13:28:40 by kacoulib         ###   ########.fr       */
+/*   Updated: 2016/11/28 21:47:36 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+int				ft_atoi(const char *str)
 {
-	int i;
-	int j;
-	int k;
-	int l;
-	int r;
+	int			r;
+	int			isneg;
+	const char	*tmp;
 
-	i = 0;
-	while (ft_isdigit(str[i]))
-		i++;
-	if (i == 0 || i == 1)
-		return ((i == 0) ? 0 : str[0] - 48);
-	j = 1;
-	k = 0;
-	l = 0;
 	r = 0;
-	while (i-- > 0)
+	isneg = 0;
+	tmp = ft_strtrim(str);
+	if (*tmp == '+')
+		tmp++;
+	if (*tmp == '-')
 	{
-		j = 1;
-		k = 0;
-		while (k++ < i)
-			j *= 10;
-		r += j * (str[l] - 48);
-		l++;
+		isneg = 1;
+		tmp++;
 	}
-	return (r);
+	while (*tmp != '\0' && ft_isdigit(*tmp))
+		r = r * 10 + (*tmp++ - '0');
+	return (isneg ? -r : r);
 }

@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/23 16:33:03 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/11/27 14:52:31 by kacoulib         ###   ########.fr       */
+/*   Created: 2016/11/28 18:47:52 by kacoulib          #+#    #+#             */
+/*   Updated: 2016/11/28 19:00:19 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strjoin(char const *s1, char const *s2)
+t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	int		i;
-	int		j;
-	char	*r;
+	t_list	*next;
+	t_list	*r;
 
-	i = 0;
-	r = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)));
-	if (!r)
-		return (NULL);
-	while (s1[i])
+	while (lst)
 	{
-		r[i] = s1[i];
-		i++;
+		next = lst->next;
+		f(lst);
+		lst = next;
+		r = lst;
 	}
-	j = 0;
-	while (s2[j])
-	{
-		r[i] = s2[j];
-		i++;
-		j++;
-	}
-	r[i] = '\0';
-	return (r);
 }
