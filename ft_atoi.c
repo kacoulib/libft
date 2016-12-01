@@ -6,7 +6,7 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 16:00:37 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/11/28 21:47:36 by kacoulib         ###   ########.fr       */
+/*   Updated: 2016/12/01 17:49:37 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int				ft_atoi(const char *str)
 	r = 0;
 	isneg = 0;
 	tmp = ft_strtrim(str);
+	if (!str || !ft_strlen(tmp))
+		return (0);
 	if (*tmp == '+')
 		tmp++;
 	if (*tmp == '-')

@@ -6,7 +6,7 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 15:16:44 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/11/28 21:31:28 by kacoulib         ###   ########.fr       */
+/*   Updated: 2016/12/01 17:30:02 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ char	*ft_strchr(const char *s, int c)
 {
 	while (*s != '\0' && *s != (char)c)
 		s++;
-	return ((*s != (char)c) ?  NULL : (char *)s);
+	return ((*s != (char)c) ? NULL : (char *)s);
 }

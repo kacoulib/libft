@@ -6,12 +6,12 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/24 11:04:04 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/11/28 22:03:27 by kacoulib         ###   ########.fr       */
+/*   Updated: 2016/12/01 17:54:10 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+#include "stdio.h"
 int			ft_firstcheck(char const *s, char **r)
 {
 	if (ft_strlen(s) <= 1)
@@ -69,6 +69,9 @@ char		**ft_strsplit(char const *s, char c)
 	i = 0;
 	j = 0;
 	r = NULL;
+	printf("\n-%s- (%c)", s, c);
+	if (s == NULL)
+		return (r);
 	r = (char **)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (r == NULL || ft_firstcheck(s, r) == 0)
 		return (NULL);

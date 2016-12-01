@@ -6,7 +6,7 @@
 #    By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 21:06:34 by kacoulib          #+#    #+#              #
-#    Updated: 2016/11/26 11:06:46 by kacoulib         ###   ########.fr        #
+#    Updated: 2016/12/01 13:28:31 by kacoulib         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ $(NAME):
 		ar rc $(NAME) $(OBJ)
 		ranlib $(NAME)
 clean : 
-	rm -rf *.o $(NAME)
+	rm -rf *.o
 
 fclean : clean
 	rm -rf $(NAME)
