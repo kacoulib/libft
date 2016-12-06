@@ -6,31 +6,39 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 16:00:37 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/12/01 17:49:37 by kacoulib         ###   ########.fr       */
+/*   Updated: 2016/12/06 17:12:28 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int				ft_atoi(const char *str)
+static int	ft_isspace(int c)
 {
-	int			r;
-	int			isneg;
-	const char	*tmp;
+	return ((9 <= c && c <= 13) || c == 32);
+}
 
-	r = 0;
+int			ft_atoi(const char *str)
+{
+	int n;
+	int isneg;
+
 	isneg = 0;
-	tmp = ft_strtrim(str);
-	if (!str || !ft_strlen(tmp))
-		return (0);
-	if (*tmp == '+')
-		tmp++;
-	if (*tmp == '-')
+	n = 0;
+	while (ft_isspace(*str))
+		str++;
+	if (*str == '+')
+		str++;
+	else if (*str == '-')
 	{
 		isneg = 1;
-		tmp++;
+		str++;
 	}
-	while (*tmp != '\0' && ft_isdigit(*tmp))
-		r = r * 10 + (*tmp++ - '0');
-	return (isneg ? -r : r);
+	while (*str != '\0' && ft_isdigit(*str))
+	{
+		n = n * 10 + (*str++ - '0');
+	}
+	if (isneg)
+		return (-n);
+	else
+		return (n);
 }

@@ -6,12 +6,11 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 15:16:44 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/12/01 17:30:02 by kacoulib         ###   ########.fr       */
+/*   Updated: 2016/12/06 17:19:04 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
 
 char	*ft_strchr(const char *s, int c)
 {

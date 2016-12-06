@@ -6,7 +6,7 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/28 18:47:52 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/11/28 19:00:19 by kacoulib         ###   ########.fr       */
+/*   Updated: 2016/12/06 17:13:51 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 		lst = next;
 		r = lst;
 	}
+	return (lst);
 }

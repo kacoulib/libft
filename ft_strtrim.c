@@ -6,11 +6,10 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/23 15:41:07 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/12/01 15:41:14 by kacoulib         ###   ########.fr       */
+/*   Updated: 2016/12/06 17:16:49 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdio.h"
 #include "libft.h"
 
 char		*ft_strtrim(char const *s)

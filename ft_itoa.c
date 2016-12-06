@@ -6,13 +6,13 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/24 15:54:27 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/12/01 17:50:14 by kacoulib         ###   ########.fr       */
+/*   Updated: 2016/12/06 16:49:08 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strrev(char *s)
+static char	*ft_strrev(char *s)
 {
 	int		i;
 	int		j;
@@ -45,7 +45,7 @@ char		*ft_itoa(int n)
 	j = len;
 	while (len /= 10)
 		i++;
-	r = ft_strnew(i);
+	r = ft_strnew(i + ((j < 0) ? 2 : 1));
 	if (r == NULL)
 		return (NULL);
 	r[i] = '\0';
