@@ -6,7 +6,7 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/24 18:39:59 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/11/28 18:35:55 by kacoulib         ###   ########.fr       */
+/*   Updated: 2016/12/07 15:48:42 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void		ft_lstadd(t_list **alst, t_list *new)
 {
-	t_list	tmp;
+	t_list	*tmp;
 
 	tmp = *alst;
 	*alst = new;

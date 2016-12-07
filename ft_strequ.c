@@ -6,7 +6,7 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/23 17:18:12 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/11/23 17:27:08 by kacoulib         ###   ########.fr       */
+/*   Updated: 2016/12/07 17:41:20 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_strequ(char const *s1, char const *s2)
 {
-	if (!ft_strcmp((char *)s1, (char *)s2))
-		return (1);
-	return (0);
+	if (!s1 || !s2)
+		return (0);
+	return ((!ft_strcmp((char *)s1, (char *)s2)) ? 1 : 0);
 }

@@ -6,7 +6,7 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/28 17:19:37 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/11/28 17:50:07 by kacoulib         ###   ########.fr       */
+/*   Updated: 2016/12/07 16:20:15 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,7 @@ t_list		*ft_lstnew(void const *content, size_t content_size)
 		new->content = (void *)malloc(content_size);
 		if (!new->content)
 			return (NULL);
-		new->content = (void *)ft_strcpy((char *)new->content,
-				(const char *)content);
+		new->content = ft_memcpy(new->content, content, content_size);
 		new->content_size = content_size;
 	}
 	new->next = NULL;
