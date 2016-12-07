@@ -6,7 +6,7 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 14:48:03 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/12/07 17:33:08 by kacoulib         ###   ########.fr       */
+/*   Updated: 2016/12/07 18:18:40 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,4 +84,5 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_lstpush(t_list *des, t_list *src);
 int					ft_isspace(int c);
+char				*ft_ucfirst(char *c);
 #endif
