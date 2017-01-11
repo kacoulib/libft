@@ -6,7 +6,7 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 14:48:03 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/12/07 19:53:29 by kacoulib         ###   ########.fr       */
+/*   Updated: 2017/01/11 04:27:53 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,6 @@ int					ft_isspace(int c);
 char				*ft_ucfirst(char *c);
 int					ft_indexof(char *s, char c);
 int					ft_pow(int base, int exponent);
+char				*ft_strpop(char **s, char c);
 
 #endif
