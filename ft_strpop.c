@@ -6,7 +6,7 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/11 04:19:01 by kacoulib          #+#    #+#             */
-/*   Updated: 2017/01/11 06:06:54 by kacoulib         ###   ########.fr       */
+/*   Updated: 2017/01/11 13:30:40 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char		*ft_strpop(char **s, char c)
 	else if (i == 0)
 	{
 		(*s)++;
-		return (NULL);
+		return (ft_strpop(s, c));
 	}
 	if (!(r = ft_memalloc(i)))
 		return (NULL);
