@@ -6,7 +6,7 @@
 /*   By: kacoulib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/23 16:33:03 by kacoulib          #+#    #+#             */
-/*   Updated: 2016/12/07 17:46:53 by kacoulib         ###   ########.fr       */
+/*   Updated: 2017/02/24 09:15:43 by kacoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char		*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 || !s2)
 		return (NULL);
 	i = 0;
-	r = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)));
+	r = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!r)
 		return (NULL);
 	while (s1[i])
